@@ -1,0 +1,22 @@
+<div>
+  <div class= "{{forBestProducts ? 'grid_four': 'container'}}">
+    <div *ngFor="let item of cardsData" class="{{forBestProducts ? 'container_data_four': 'container_data'}}">
+      <div class="like_btn" (click)="toggleButtonLike(item.id)" [ngClass]="activeLike ? 'active_like':'disable_like'"></div>
+      <div style="margin: 16px">
+        <div class="logo" style="background-image:url('{{ item.image }}');"></div>
+        <div class="desc_list">
+          <h4 *ngIf="!forBestProducts">{{ item.title }}</h4>
+          <h5 *ngIf="forBestProducts">{{ item.title }}</h5>
+          <h5>{{ item.price | currency }}</h5>
+          <h6>Rating: {{ item.rating.rate }}</h6>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  <div *ngIf="!forBestProducts" class="more_data" >
+    <button *ngIf="btnMoreVisible" class="white_btn" style="padding: 13px 25px;" (click)="getRandomData()">Посмотреть еще</button>
+  </div>
+</div>
+
+

@@ -1,0 +1,78 @@
+.header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+
+.links ul {
+    display: flex;
+}
+
+.links ul li:nth-child(-n + 1) {
+    margin-right: 42px;
+}
+
+li {
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.32px;
+}
+
+.pen_user_profile {
+    width: 25px;
+    height: 25px;
+    background-image: url(../../../../assets/header/pen_user_profile.svg);
+    margin-right: 34px;
+}
+
+.profile_user {
+    display: flex;
+}
+
+.user_information {
+    display: flex;
+    align-items: center;
+}
+
+.logo_user {
+    width: 41px;
+    height: 41px;
+    border-radius: 41px;
+    background-color: grey;
+    margin-right: 17px;
+}
+
+.down_description {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: 0 80px 0 0;
+    max-width: 224px;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+}
+
+.down_description li {
+    border-radius: 6px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+    padding: 12px 16px;
+    cursor: pointer;
+}
+.down_description li:hover {
+    background-color: #c6c8cc;
+}
+
+.user_list {
+    width: 100%;
+}

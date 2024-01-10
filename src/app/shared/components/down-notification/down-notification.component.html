@@ -1,0 +1,11 @@
+<header #close *ngIf="isVisible" >
+  <div class="container">
+    <div class="logo">
+      <img src="../../../../assets/notifications/Speakerphone.svg" alt="" />
+      <p>Хорошие новости! Мы открыли наш интернет-магазин</p>
+    </div>
+    <div class="close" (click)="hideNotification()">
+      <img src="../../../../assets/notifications/X.svg" alt="" />
+    </div>
+  </div>
+</header>

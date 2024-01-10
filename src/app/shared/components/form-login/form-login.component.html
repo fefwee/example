@@ -1,0 +1,43 @@
+<div class="wrapper_container">
+  <div>
+    <p class="header_form">{{ headerText }}</p>
+    <div class="container">
+      <form [formGroup]="loginForm">
+        <div class="flex_input">
+          <label for="login">Логин</label>
+          <input type="text" pInputText formControlName="username" />
+        </div>
+        <div class="flex_input">
+          <label for="password">Пароль</label>
+          <input type="password" pInputText formControlName="password" />
+        </div>
+        <div *ngIf="authPage" class="remember_me">
+          <div class="remember_list">
+            <input type="checkbox" />
+            <span>Запомнить меня</span>
+          </div>
+          <a>Зарегистрироваться</a>
+        </div>
+        <div>
+          <button
+            class="btn_default"
+            style="width: 100%"
+            (click)="sendDataUser()"
+            [disabled]="!loginForm.valid"
+          >
+            {{ textButton }}
+          </button>
+        </div>
+
+        <div *ngIf="authPage" class="line_flex">
+          <span class="grey_line"></span>
+          <span class="hr_hrey">Или войти через</span>
+          <span class="grey_line"></span>
+        </div>
+        <div *ngIf="authPage" class="git_btn white_btn">
+          <button class="git_icon"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

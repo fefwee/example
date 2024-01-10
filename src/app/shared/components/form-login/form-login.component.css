@@ -1,0 +1,97 @@
+.wrapper_container {
+    max-width: 100%;
+    min-height: 790px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 448px;
+    min-height: 424px auto;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+}
+
+form {
+    padding: 32px 40px;
+}
+
+.header_form {
+    color: #111827;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 36px;
+    margin-bottom: 32px;
+}
+
+form>div,
+button :not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.flex_input {
+    display: flex;
+    flex-direction: column;
+}
+
+.grey_line {
+    height: 1px;
+    flex-grow: 1;
+    background-color: #D1D5DB;
+}
+
+.line_flex {
+    display: flex;
+    align-items: center;
+}
+
+.line_flex span {
+    margin: 0 8px;
+}
+
+.git_icon {
+
+    width: 100%;
+    height: 20px;
+    background-image: url(../../../../assets/modal/git-icon.svg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: #ffff;
+    margin: 9px 0;
+}
+
+.remember_me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.remember_list {
+    display: flex;
+    align-items: center;
+}
+
+.remember_list input {
+    margin-right: 8px;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+.hr_hrey {
+    color: #6B7280;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}

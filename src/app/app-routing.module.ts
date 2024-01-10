@@ -1,7 +1,21 @@
+import { AuthModule } from './pages/auth/auth.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/registration/registration.module').then(m => m.RegistrationModule)
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

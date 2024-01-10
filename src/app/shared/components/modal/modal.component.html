@@ -1,0 +1,30 @@
+<div class="container" #modal>
+    <div class="content_modal">
+      <div class="header_content">
+        <div class="logo">
+          <img src="../../../../assets/modal/Exclamation.svg" alt="" />
+        </div>
+        <div class="content">
+          <ul>
+            <li>
+              <h5>{{ title.header }}</h5>
+            </li>
+            <li>
+              <p>{{ title.subHeader }}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom_content">
+        <div class="btn_box">
+          <button class="white_btn" (click)="closeModal()">Закрыть</button>
+          <button
+            class="btn_default"
+            [ngClass]="{ deleteBtn: btnTitle.delete }"
+          >
+            {{ btnTitle.title }}
+          </button>
+        </div>
+      </div>
+    </div>
+</div>

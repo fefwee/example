@@ -1,0 +1,90 @@
+.container {
+    margin-top: 100px;
+    min-width: 450px;
+    min-height: 434px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+
+.logo {
+    min-width: 234px;
+    min-height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
+
+.container_data {
+    position: relative;
+    width: 100%;
+    border-radius: 30px;
+    background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
+}
+.container_data_four {
+    position: relative;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.container_data:not(:last-child) {
+    margin-right: 30px;
+}
+
+h5,
+h6 {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.96px;
+}
+
+.disable_like {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 58px;
+    height: 58px;
+    background-image: url(../../../../assets/single-cards/disable-like.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.active_like {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 58px;
+    height: 58px;
+    background-image: url(../../../../assets/single-cards/active-like.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    color: #374151;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.more_data {
+    margin: 75px 0 100px 0;
+    text-align: center;
+    width: 100%;
+}
+.grid_four {
+    margin-top: 100px;
+    min-width: 290px;
+    min-height: 316px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}

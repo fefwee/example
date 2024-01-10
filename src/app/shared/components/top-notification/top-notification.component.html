@@ -1,0 +1,18 @@
+<div class="container" #close *ngIf="isVisible">
+  <div class="notification">
+    <div class="logo">
+      <div>
+        <img src="../../../../assets/notifications/Check circle.svg" alt="" />
+      </div>
+      <div class="description">
+        <ul>
+          <li>Добавлено в избранное</li>
+          <sub>Сохранили это для вас</sub>
+        </ul>
+      </div>
+    </div>
+    <div class="close_notifications" (click)="hideNotification()">
+      <img src="../../../../assets/notifications/xGrey.svg" alt="" />
+    </div>
+  </div>
+</div>
