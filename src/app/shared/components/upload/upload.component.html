@@ -1,0 +1,28 @@
+<div class="container" *ngIf="visible">
+  <div class="wrapper">
+    <button type="button" (click)="fileInput.click()" class="upload">
+      <div>
+        <input
+          #fileInput
+          type="file"
+          id="upl"
+          (change)="onFileInput($event)"
+          style="display: none"
+        />
+      </div>
+    </button>
+    <label for="upl"
+      >Загрузите <span style="color: #4b5563">или перетащите</span></label
+    >
+    <span class="substr">PNG, JPG, GIF до 10MB</span>
+  </div>
+</div>
+
+<div *ngIf="!visible" class="container_data">
+  <ul class="data_block">
+    <li class="data_logo">
+      <img src="../../../../assets/upload/PaperClip.svg" alt="" />{{ data }}
+    </li>
+    <li (click)="removeData()"><a>удалить</a></li>
+  </ul>
+</div>

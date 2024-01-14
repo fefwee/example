@@ -1,0 +1,44 @@
+.container {
+    max-width: 840px;
+}
+
+.removed {
+    min-width: 24px;
+    min-height: 24px;
+    background-image: url(../../../../assets/checkbox/cyrcle.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.active {
+    min-width: 24px;
+    min-height: 24px;
+    background-image: url(../../../../assets/checkbox/done.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.logo {
+    margin-right: 24px;
+}
+
+.activeText {
+    color: rgba(0, 0, 0, 0.60);
+    text-decoration: line-through;
+    opacity: 0.2;
+}
+
+.text {
+    padding: 27px 0;
+}
+.text p {
+    color: rgba(0, 0, 0, 0.60);
+}

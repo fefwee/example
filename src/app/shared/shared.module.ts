@@ -12,7 +12,10 @@ import { BestProductsComponent } from './components/best-products/best-products.
 import { DownNotificationComponent } from './components/down-notification/down-notification.component';
 import { TopNotificationComponent } from './components/top-notification/top-notification.component';
 import { ModalComponent } from './components/modal/modal.component';
-
+import { SelectCheckboxComponent } from './components/select-checkbox/select-checkbox.component';
+import { CreateAndEditFormComponent } from './components/create-and-edit-form/create-and-edit-form.component';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { UploadComponent } from './components/upload/upload.component';
 
 
 @NgModule({
@@ -25,14 +28,18 @@ import { ModalComponent } from './components/modal/modal.component';
     BestProductsComponent,
     DownNotificationComponent,
     TopNotificationComponent,
-    ModalComponent
+    ModalComponent,
+    SelectCheckboxComponent,
+    CreateAndEditFormComponent,
+    UploadComponent
   ],
   imports: [
     CommonModule,
     InputTextModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    InputTextareaModule
   ],
   exports: [
     HeaderComponent,
@@ -43,7 +50,10 @@ import { ModalComponent } from './components/modal/modal.component';
     BestProductsComponent,
     DownNotificationComponent,
     TopNotificationComponent,
-    ModalComponent
+    ModalComponent,
+    SelectCheckboxComponent,
+    CreateAndEditFormComponent,
+    UploadComponent
   ]
 })
 export class SharedModule { }

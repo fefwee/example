@@ -1,0 +1,81 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  <ul class="general_bloc">
+    <li>
+      <h5>Основная информация</h5>
+    </li>
+    <li class="flex">
+      <p>Название рецепта</p>
+      <input type="text" pInputText />
+    </li>
+    <li class="flex">
+      <p>Краткое описание</p>
+      <textarea pInputTextarea></textarea>
+    </li>
+    <li class="flex">
+      <p>Фотография</p>
+      <div>
+        <app-upload></app-upload>
+      </div>
+    </li>
+    <li>
+      <h5>Дополнительная информация</h5>
+    </li>
+    <li class="flex">
+      <p>Категория</p>
+      <input type="text" pInputText class="input_max" />
+    </li>
+    <li class="flex">
+      <p>Время приготовления</p>
+      <input type="text" pInputText class="input_max" />
+    </li>
+    <li class="flex">
+      <p>Первый ингридиент</p>
+      <input type="text" pInputText />
+    </li>
+    <li class="flex">
+      <p>Белки</p>
+      <input type="text" pInputText />
+    </li>
+    <li class="flex">
+      <p>Жиры</p>
+      <input type="text" pInputText class="input_max" />
+    </li>
+    <li class="flex">
+      <p>Углеводы</p>
+      <input type="text" pInputText class="input_max" />
+    </li>
+    <li class="flex">
+      <p>Калории</p>
+      <input type="text" pInputText class="input_max" />
+    </li>
+    <li class="flex">
+      <h5>Детальная информация</h5>
+      <small>Детально опишите первый шаг вашего рецепта</small>
+    </li>
+    <li class="flex">
+      <p>Краткое действие первого шага</p>
+      <input
+        type="text"
+        pInputText
+        placeholder="Разогреть сковородку"
+        class="input_max"
+      />
+    </li>
+    <li class="flex">
+      <p>Описание первого шага</p>
+      <textarea
+        pInputTextarea
+        placeholder="Разогреть сковородку. Затем положить туда репчатый лук"
+      ></textarea>
+    </li>
+    <div class="submit_btn">
+      <button class="btn_default">
+        <div class="mail_btn">
+          <img src="../../../../assets/button/Mail.svg" alt="" />
+          <p>{{ titleBtn || "Отправить рецепт" }}</p>
+        </div>
+      </button>
+    </div>
+  </ul>
+</div>
