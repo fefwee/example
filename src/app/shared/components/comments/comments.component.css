@@ -1,0 +1,46 @@
+.container h4 {
+    margin-bottom: 40px;
+}
+
+.header {
+    color: #111827;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.sub_header {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background-image: url(../../../../assets/comments/Avatar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
+.box_comments{
+    display: flex;
+    align-items: center;
+    border:.5px solid rgb(215, 208, 208);
+    margin: 2px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.text_comments{
+    display: flex;
+    flex-direction: column;
+}
+li{
+    width: 100%;
+    padding:20px 0;
+   
+}

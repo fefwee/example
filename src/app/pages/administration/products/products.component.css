@@ -1,0 +1,18 @@
+.edit {
+    max-width: 24px;
+    max-height: 24px;
+    background-image: url(../../../../assets/admin-user-table/edit-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.delete {
+    max-width: 24px;
+    max-height: 24px;
+    background-image: url(../../../../assets/admin-user-table/delete-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card{
+    margin-top: 87px;
+}

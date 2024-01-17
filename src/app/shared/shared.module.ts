@@ -16,6 +16,7 @@ import { SelectCheckboxComponent } from './components/select-checkbox/select-che
 import { CreateAndEditFormComponent } from './components/create-and-edit-form/create-and-edit-form.component';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { UploadComponent } from './components/upload/upload.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { UploadComponent } from './components/upload/upload.component';
     ModalComponent,
     SelectCheckboxComponent,
     CreateAndEditFormComponent,
-    UploadComponent
+    UploadComponent,
+    CommentsComponent
   ],
   imports: [
     CommonModule,
@@ -53,7 +55,8 @@ import { UploadComponent } from './components/upload/upload.component';
     ModalComponent,
     SelectCheckboxComponent,
     CreateAndEditFormComponent,
-    UploadComponent
+    UploadComponent,
+    CommentsComponent
   ]
 })
 export class SharedModule { }

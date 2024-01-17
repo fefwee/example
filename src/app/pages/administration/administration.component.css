@@ -1,0 +1,26 @@
+.container {
+    margin-top: 60px;
+}
+.container h5 {
+    margin-bottom: 40px;
+}
+.list_item {
+    display: flex;
+}
+
+.list_item li {
+    padding: 0 4px 16px 4px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px
+}
+
+.list_item :not(:last-child) {
+    margin-right: 32px;
+}
+
+.active {
+    border-bottom: 2px solid #3A3395;
+    color: #3A3395;
+}

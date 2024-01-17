@@ -1,0 +1,12 @@
+<div class="container">
+  <h4>Комментарии</h4>
+  <ng-container *ngFor="let item of comments">
+    <ul class="box_comments">
+      <li class="logo"></li>
+      <li class="text_comments">
+        <span class="header"> {{ item.user.username }}</span>
+        <span class="sub_header">{{ item.body }}</span>
+      </li>
+    </ul>
+  </ng-container>
+</div>

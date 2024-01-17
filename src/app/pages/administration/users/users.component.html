@@ -1,0 +1,28 @@
+<div class="card">
+  <p-table [value]="tableUsersData" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th><span>Наименование</span></th>
+        <th>Статус</th>
+        <th>роль</th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+      <tr>
+        <td style="display: flex;">
+          <div class="user_block">
+            <img src="{{ user.image }}" alt="" />
+            <div>
+              <p>{{ user.firstName }} {{ user.lastName }}</p>
+              <p>{{ user.username }}</p>
+            </div>
+          </div>
+        </td>
+        <td><span class="active">Активен</span></td>
+        <td>роль</td>
+        <td><span class="edit">Редактировать</span></td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
