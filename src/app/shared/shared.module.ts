@@ -17,6 +17,8 @@ import { CreateAndEditFormComponent } from './components/create-and-edit-form/cr
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { UploadComponent } from './components/upload/upload.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { DetailProductComponent } from './components/detail-product/detail-product.component';
+import { PrintAndShareComponent } from './components/print-and-share/print-and-share.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { CommentsComponent } from './components/comments/comments.component';
     SelectCheckboxComponent,
     CreateAndEditFormComponent,
     UploadComponent,
-    CommentsComponent
+    CommentsComponent,
+    DetailProductComponent,
+    PrintAndShareComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +45,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    InputTextareaModule
+    InputTextareaModule,
   ],
   exports: [
     HeaderComponent,
@@ -56,7 +60,9 @@ import { CommentsComponent } from './components/comments/comments.component';
     SelectCheckboxComponent,
     CreateAndEditFormComponent,
     UploadComponent,
-    CommentsComponent
+    CommentsComponent,
+    DetailProductComponent,
+    PrintAndShareComponent
   ]
 })
 export class SharedModule { }

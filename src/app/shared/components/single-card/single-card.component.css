@@ -8,6 +8,21 @@
     gap: 40px;
 }
 
+.header {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header>* {
+    padding: 10px 0;
+}
+
+.header_flex {
+    display: flex;
+    align-items: center;
+}
+
 
 .logo {
     min-width: 234px;
@@ -25,6 +40,7 @@
     border-radius: 30px;
     background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 }
+
 .container_data_four {
     position: relative;
     width: 100%;
@@ -79,6 +95,7 @@ button {
     text-align: center;
     width: 100%;
 }
+
 .grid_four {
     margin-top: 100px;
     min-width: 290px;

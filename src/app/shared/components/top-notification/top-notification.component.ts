@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-top-notification',
@@ -7,7 +8,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class TopNotificationComponent implements OnInit {
 
-  public isVisible = false;
+  @Input() subject = new BehaviorSubject<boolean>(false);
   
   @ViewChild('close') closeNotification!: ElementRef;
 
@@ -15,6 +16,7 @@ export class TopNotificationComponent implements OnInit {
 
 
   ngOnInit(): void {
+    console.log(this.subject.value  )
   }
 
   public hideNotification() {

@@ -1,4 +1,3 @@
-import { AuthModule } from './pages/auth/auth.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -18,6 +17,14 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./pages/administration/administration.module').then(m => m.AdministrationModule)
+  },
+  {
+    path: 'create-recipe',
+    loadChildren: () => import('./pages/create-recipe/create-recipe.module').then(m => m.CreateRecipeModule)
+  },
+  {
+    path:'recipe',
+    loadChildren: () => import('./pages/catalog-products/catalog-products.module').then(m => m.CatalogProductsModule)
   }
 ];
 

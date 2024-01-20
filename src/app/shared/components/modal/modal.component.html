@@ -7,10 +7,10 @@
         <div class="content">
           <ul>
             <li>
-              <h5>{{ title.header }}</h5>
+              <h5>{{ options.value.header }}</h5>
             </li>
             <li>
-              <p>{{ title.subHeader }}</p>
+              <p>{{ options.value.subHeader }}</p>
             </li>
           </ul>
         </div>
@@ -20,9 +20,9 @@
           <button class="white_btn" (click)="closeModal()">Закрыть</button>
           <button
             class="btn_default"
-            [ngClass]="{ deleteBtn: btnTitle.delete }"
+            [ngClass]="{ deleteBtn: options.value.delete }"
           >
-            {{ btnTitle.title }}
+            {{ options.value.title }}
           </button>
         </div>
       </div>

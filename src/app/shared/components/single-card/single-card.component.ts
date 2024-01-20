@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CardData } from 'src/app/interfaces/cards-inteface';
 import { CardsGetDataService } from 'src/app/services/cards-data/cards-get-data.service';
 
@@ -8,22 +9,28 @@ import { CardsGetDataService } from 'src/app/services/cards-data/cards-get-data.
   styleUrls: ['./single-card.component.css']
 })
 export class SingleCardComponent implements OnInit {
-  @Input() count!:number;
+  @Input() count!: number;
 
-  @Input() forBestProducts!:boolean;
-  
+  @Input() forBestProducts!: boolean;
+
+
   public cardsData: CardData[] = [];
   public activeLike = false;
   public btnMoreVisible = true;
 
-  constructor(private getDataCardsService: CardsGetDataService) { }
+  constructor(
+    private getDataCardsService: CardsGetDataService,
+    private activateRoute: ActivatedRoute,
+    private router:Router) {
+  }
 
   ngOnInit(): void {
     this.getData()
-
   }
+
   public getData() {
-    this.getDataCardsService.getCardsData(this.count ? this.count : 3).subscribe({
+
+    this.getDataCardsService.getCardsData(this.count).subscribe({
       next: (data: CardData[]) => {
         this.cardsData = data;
       }
@@ -46,6 +53,10 @@ export class SingleCardComponent implements OnInit {
       if (item.id === id)
         this.activeLike = true;
     })
+  }
+
+  public navigateToDetail(id: number) {
+    this.router.navigate(['/recipe/',id]);
   }
 
 }

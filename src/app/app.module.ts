@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateRecipeComponent } from './pages/create-recipe/create-recipe.component';
+import { CatalogProductsComponent } from './pages/catalog-products/catalog-products.component';
 
 @NgModule({
   declarations: [

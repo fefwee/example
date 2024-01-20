@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <div class="print">
+    <h4>{{ singleCardData.title }}</h4>
+    <div >
+      <app-print-and-share></app-print-and-share>
+    </div>
+  </div>
+  <div class="container">
+    <div
+      style="background-image: url({{singleCardData.image}});"
+      class="logo"
+    ></div>
+    <ul class="card">
+      <h5>Характеристики</h5>
+      <li>
+        <b>Категория:</b> <span>{{ singleCardData.category }}</span>
+      </li>
+      <li>
+        <b>Описание:</b
+        ><span style="margin-left: 20px">{{ singleCardData.description }}</span>
+      </li>
+      <li>
+        <b>Цена:</b><span> {{ singleCardData.price | currency }}</span>
+      </li>
+    </ul>
+  </div>
+  <p style="margin-top: 50px;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolores
+    repudiandae quia debitis, nam, voluptate minima hic ipsum explicabo quas ex
+    odio enim porro saepe esse pariatur natus ad eos.
+  </p>
+</div>

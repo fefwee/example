@@ -1,9 +1,27 @@
-<div>
-  <div class= "{{forBestProducts ? 'grid_four': 'container'}}">
-    <div *ngFor="let item of cardsData" class="{{forBestProducts ? 'container_data_four': 'container_data'}}">
-      <div class="like_btn" (click)="toggleButtonLike(item.id)" [ngClass]="activeLike ? 'active_like':'disable_like'"></div>
-      <div style="margin: 16px">
-        <div class="logo" style="background-image:url('{{ item.image }}');"></div>
+<div style="margin-top: 150px">
+  <div class="header" *ngIf="!forBestProducts">
+    <h3>Лучшие продукты</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqut enim ad minim
+    </p>
+  </div>
+
+  <div class="{{ forBestProducts ? 'grid_four' : 'container' }}">
+    <div
+      *ngFor="let item of cardsData"
+      class="{{ forBestProducts ? 'container_data_four' : 'container_data' }}"
+    >
+      <div
+        class="like_btn"
+        (click)="toggleButtonLike(item.id)"
+        [ngClass]="activeLike ? 'active_like' : 'disable_like'"
+      ></div>
+      <div style="margin: 16px" (click)="navigateToDetail(item.id)">
+        <div
+          class="logo"
+          style="background-image:url('{{ item.image }}');"
+        ></div>
         <div class="desc_list">
           <h4 *ngIf="!forBestProducts">{{ item.title }}</h4>
           <h5 *ngIf="forBestProducts">{{ item.title }}</h5>
@@ -12,11 +30,15 @@
         </div>
       </div>
     </div>
-   
   </div>
-  <div *ngIf="!forBestProducts" class="more_data" >
-    <button *ngIf="btnMoreVisible" class="white_btn" style="padding: 13px 25px;" (click)="getRandomData()">Посмотреть еще</button>
+  <div *ngIf="!forBestProducts" class="more_data">
+    <button
+      *ngIf="btnMoreVisible"
+      class="white_btn"
+      style="padding: 13px 25px"
+      (click)="getRandomData()"
+    >
+      Посмотреть еще
+    </button>
   </div>
 </div>
-
-

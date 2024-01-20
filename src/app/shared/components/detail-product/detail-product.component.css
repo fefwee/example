@@ -1,0 +1,62 @@
+
+.wrapper h3 {
+    margin: 80px 0 70px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 840px;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    border: 1px solid rgb(219, 212, 212);
+}
+
+.card {
+    max-width: 500px;
+    height: 600px;
+    background-color: #E7FAFE;
+    border-radius: 30px;
+    padding: 32px;
+}
+
+.card b {
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.72px;
+}
+
+.card li {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+
+
+}
+
+.card span {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.72px;
+    text-align: justify;
+}
+.print{
+    margin: 80px 0;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
