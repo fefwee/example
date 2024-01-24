@@ -1,4 +1,10 @@
 <div class="container">
+  <div class="btn_box">
+    <div class="btn_slider">
+      <button (click)="next()" class="prev_btn"></button>
+      <button (click)="prev()" class="next_btn"></button>
+    </div>
+  </div>
   <div class="slider_wrapper">
     <div class="slider" *ngFor="let item of dataCards" #slider>
       <div class="slide">
@@ -11,7 +17,9 @@
             <h5>{{ item.category }}</h5>
             <h4>{{ item.price | currency }}</h4>
             <div class="check_item">
-              <button class="btn_default">Посмотреть</button>
+              <button class="btn_default" (click)="navigateToId(item.id)">
+                Посмотреть
+              </button>
             </div>
           </div>
         </div>
@@ -21,12 +29,6 @@
           style="background-image: url('{{ item.image }}')"
         ></div>
       </div>
-    </div>
-  </div>
-  <div class="btn_box">
-    <div class="btn_slider">
-      <button (click)="next()" class="prev_btn"></button>
-      <button (click)="prev()" class="next_btn"></button>
     </div>
   </div>
 </div>

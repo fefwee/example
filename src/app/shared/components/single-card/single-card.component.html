@@ -1,11 +1,11 @@
 <div style="margin-top: 150px">
-  <div class="header" *ngIf="!forBestProducts">
+<!--   <div class="header" *ngIf="!forBestProducts">
     <h3>Лучшие продукты</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqut enim ad minim
     </p>
-  </div>
+  </div> -->
 
   <div class="{{ forBestProducts ? 'grid_four' : 'container' }}">
     <div
@@ -14,10 +14,12 @@
     >
       <div
         class="like_btn"
-        (click)="toggleButtonLike(item.id)"
         [ngClass]="activeLike ? 'active_like' : 'disable_like'"
       ></div>
-      <div style="margin: 16px" (click)="navigateToDetail(item.id)">
+      <div
+        style="margin: 16px"
+        (click)="navigateToId(item.id)"
+      >
         <div
           class="logo"
           style="background-image:url('{{ item.image }}');"

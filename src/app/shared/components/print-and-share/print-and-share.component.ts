@@ -18,7 +18,7 @@ export class PrintAndShareComponent {
   }
   public share() {
     this.componentRef = this.viewRef.createComponent(ModalComponent);
-    this.componentRef.instance.options  .next({
+    this.componentRef.instance.options.next({
       title: 'Поделиться',
       delete: true,
       header: 'Поделиться этим товаром?',

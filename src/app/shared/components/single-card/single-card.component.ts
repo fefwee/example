@@ -21,7 +21,8 @@ export class SingleCardComponent implements OnInit {
   constructor(
     private getDataCardsService: CardsGetDataService,
     private activateRoute: ActivatedRoute,
-    private router:Router) {
+    private router:Router
+  ) {
   }
 
   ngOnInit(): void {
@@ -54,9 +55,9 @@ export class SingleCardComponent implements OnInit {
         this.activeLike = true;
     })
   }
-
-  public navigateToDetail(id: number) {
-    this.router.navigate(['/recipe/',id]);
+  
+  public navigateToId(id: number) {
+    this.router.navigate([`recipe/${id}`])
   }
 
 }

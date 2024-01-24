@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="print">
     <h4>{{ singleCardData.title }}</h4>
-    <div >
+    <div>
       <app-print-and-share></app-print-and-share>
     </div>
   </div>
@@ -24,9 +24,29 @@
       </li>
     </ul>
   </div>
-  <p style="margin-top: 50px;">
+  <p style="margin-top: 50px">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolores
     repudiandae quia debitis, nam, voluptate minima hic ipsum explicabo quas ex
     odio enim porro saepe esse pariatur natus ad eos.
   </p>
 </div>
+
+<section class="flex_section">
+  <div class="checkBox">
+    <app-select-checkbox></app-select-checkbox>
+  </div>
+  <div>
+    <app-nav-products></app-nav-products>
+  </div>
+</section>
+
+<section>
+  <app-select-checkbox [extended]="true"></app-select-checkbox>
+</section>
+
+<section>
+  <app-single-card [count]="4" [forBestProducts]="true"></app-single-card>
+</section>
+<section class="comments">
+  <app-comments></app-comments>
+</section>

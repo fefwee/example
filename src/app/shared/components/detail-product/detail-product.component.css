@@ -60,3 +60,14 @@
     align-items: center;
     justify-content: space-between;
 }
+.flex_section{
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.checkBox{
+    flex-grow: 1;
+}
+.comments{
+    margin: 100px 0;
+}

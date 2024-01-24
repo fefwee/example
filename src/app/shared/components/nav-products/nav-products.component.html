@@ -1,0 +1,12 @@
+<div class="container">
+  <h4>Прочие товары</h4>
+  <ul *ngFor="let item of products">
+    <li class="flex" (click)="navigateToId(item.id)">
+      <div class="logo" style="background-image: url({{item.image}});"></div>
+      <div class="description">
+        <h5>{{item.title}}</h5>
+        <span>{{item.category}}</span>
+      </div>
+    </li>
+  </ul>
+</div>

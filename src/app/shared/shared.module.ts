@@ -19,6 +19,8 @@ import { UploadComponent } from './components/upload/upload.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { DetailProductComponent } from './components/detail-product/detail-product.component';
 import { PrintAndShareComponent } from './components/print-and-share/print-and-share.component';
+import { NavProductsComponent } from './components/nav-products/nav-products.component';
+import { EditProductsComponent } from './components/edit-products/edit-products.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { PrintAndShareComponent } from './components/print-and-share/print-and-s
     UploadComponent,
     CommentsComponent,
     DetailProductComponent,
-    PrintAndShareComponent
+    PrintAndShareComponent,
+    NavProductsComponent,
+    EditProductsComponent
   ],
   imports: [
     CommonModule,
@@ -62,7 +66,9 @@ import { PrintAndShareComponent } from './components/print-and-share/print-and-s
     UploadComponent,
     CommentsComponent,
     DetailProductComponent,
-    PrintAndShareComponent
+    PrintAndShareComponent,
+    NavProductsComponent,
+    EditProductsComponent
   ]
 })
 export class SharedModule { }

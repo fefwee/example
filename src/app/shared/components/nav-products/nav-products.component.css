@@ -1,0 +1,22 @@
+.logo {
+    min-width: 180px;
+    min-height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container h4 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.description {
+    max-width: 200px;
+}

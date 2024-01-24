@@ -5,7 +5,12 @@ import { Component, Input } from '@angular/core';
   templateUrl: './create-and-edit-form.component.html',
   styleUrls: ['./create-and-edit-form.component.css']
 })
-export class CreateAndEditFormComponent {
+export class CreateAndEditFormComponent  {
   @Input() title!: string;
+  @Input() data!: any;
   @Input() titleBtn!: string;
+
+  constructor(){
+    console.log(this.data)
+  }
 }

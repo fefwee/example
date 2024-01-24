@@ -1,25 +1,25 @@
 <div class="card">
-    <p-table [value]="tableDataCards" [tableStyle]="{ 'min-width': '50rem' }">
-      <ng-template pTemplate="header">
-        <tr>
-          <th>Название продукта</th>
-          <th>Цена</th>
-          <th>ID продукта</th>
-          <th>Категория</th>
-          <th></th>
-          <th></th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-product>
-        <tr>
-          <td>{{ product.title }}</td>
-          <td>{{ product.price }}</td>
-          <td>{{ product.id }}</td>
-          <td>{{ product.category }}</td>
-          <td class="edit"></td>
-          <td class="delete"></td>
-        </tr>
-      </ng-template>
-    </p-table>
-  </div>
-  
+  <p-table [value]="tableDataCards" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Название продукта</th>
+        <th>Цена</th>
+        <th>ID продукта</th>
+        <th>Категория</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>{{ product.title }}</td>
+        <td>{{ product.price | currency }}</td>
+        <td>{{ product.id }}</td>
+        <td>{{ product.category }}</td>
+        <td class="edit" (click)="editItem(product.id)"></td>
+        <td class="delete" (click)="openDeleteModal()"></td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+<ng-template #dynamic></ng-template>

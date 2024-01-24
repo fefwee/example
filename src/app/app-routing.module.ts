@@ -3,10 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
-  },
-  {
     path: 'auth',
     loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
   },
@@ -23,9 +19,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/create-recipe/create-recipe.module').then(m => m.CreateRecipeModule)
   },
   {
-    path:'recipe',
+    path: 'recipe',
     loadChildren: () => import('./pages/catalog-products/catalog-products.module').then(m => m.CatalogProductsModule)
-  }
+  },
+  {
+    path: '',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+  },
 ];
 
 @NgModule({

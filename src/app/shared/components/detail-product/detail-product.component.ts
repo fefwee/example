@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CardData } from 'src/app/interfaces/cards-inteface';
 import { CardsGetDataService } from 'src/app/services/cards-data/cards-get-data.service';
 
@@ -22,10 +23,22 @@ export class DetailProductComponent implements OnInit {
     }
   }
 
-  constructor(private getCardsService: CardsGetDataService) { }
+  constructor(private getCardsService: CardsGetDataService,
+    private activatedRoute: ActivatedRoute) {
+    activatedRoute.url.subscribe({
+      next: () => {
+        this.singleGetData()
+      }
+    })
+  }
 
   ngOnInit(): void {
-    this.getCardsService.getSingleCardsData(1).subscribe({
+
+  }
+
+  public singleGetData() {
+    const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.getCardsService.getSingleCardsData(id).subscribe({
       next: (val: CardData) => {
         this.singleCardData = val;
       }

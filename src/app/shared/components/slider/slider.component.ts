@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { CardData } from 'src/app/interfaces/cards-inteface';
 import { CardsGetDataService } from 'src/app/services/cards-data/cards-get-data.service';
 
@@ -14,7 +15,8 @@ export class SliderComponent implements OnInit {
   public activeItem = 0;
 
 
-  constructor(private getDataCardsService: CardsGetDataService) { }
+  constructor(private getDataCardsService: CardsGetDataService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getData();
@@ -29,7 +31,7 @@ export class SliderComponent implements OnInit {
     })
   };
 
-  public next() {
+ public next() {
     const parentsSlider = this.slider.nativeElement.parentElement;
     const childSlider = parentsSlider.getElementsByClassName('slider')
     parentsSlider.append(childSlider[0]);
@@ -40,8 +42,12 @@ export class SliderComponent implements OnInit {
     const childSlider = parentsSlider.getElementsByClassName('slider')
     parentsSlider.prepend(childSlider[childSlider.length - 1]);
 
-  }
+  } 
 
+  public navigateToId(id: number) {
+    console.log('click')
+    this.router.navigate([`recipe/${id}`])
+  }
 
 
 
