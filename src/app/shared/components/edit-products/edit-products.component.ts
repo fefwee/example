@@ -32,11 +32,18 @@ export class EditProductsComponent {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     this.getDataService.getSingleCardsData(id).subscribe({
       next: (val: CardData) => {
+        console.log(val)
         this.cardData = val;
       }
     })
 
   }
+
+
+
+
+
+
 
 
 }

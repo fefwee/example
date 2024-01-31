@@ -21,6 +21,9 @@ import { DetailProductComponent } from './components/detail-product/detail-produ
 import { PrintAndShareComponent } from './components/print-and-share/print-and-share.component';
 import { NavProductsComponent } from './components/nav-products/nav-products.component';
 import { EditProductsComponent } from './components/edit-products/edit-products.component';
+import { MainProductsComponent } from './components/main-products/main-products.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { NoAccessPageComponent } from './components/no-access-page/no-access-page.component';
 
 
 @NgModule({
@@ -41,7 +44,10 @@ import { EditProductsComponent } from './components/edit-products/edit-products.
     DetailProductComponent,
     PrintAndShareComponent,
     NavProductsComponent,
-    EditProductsComponent
+    EditProductsComponent,
+    MainProductsComponent,
+    ErrorPageComponent,
+    NoAccessPageComponent
   ],
   imports: [
     CommonModule,
@@ -68,7 +74,8 @@ import { EditProductsComponent } from './components/edit-products/edit-products.
     DetailProductComponent,
     PrintAndShareComponent,
     NavProductsComponent,
-    EditProductsComponent
+    EditProductsComponent,
+    MainProductsComponent
   ]
 })
 export class SharedModule { }
